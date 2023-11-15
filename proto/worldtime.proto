@@ -1,0 +1,17 @@
+syntax = "proto3";
+package WorldTime;
+option go_package ="./proto";
+
+
+
+service TimeService {
+  rpc GetTime(TimeZoneRequest) returns (TimeResponse);
+}
+
+message TimeZoneRequest {
+  string name = 1;
+}
+
+message TimeResponse {
+  string time = 1;
+}
